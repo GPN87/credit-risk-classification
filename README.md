@@ -7,7 +7,7 @@ The objective was to find out whether instances of 'healthy' and 'risky' loans c
 
 The initial dataset contains 7 quantitative predictors:``loan_size``, ``interest_rate``, ``borrower_income``, ``debt_to_income``, ``num_of_accounts``, ``derogatory_marks`` and ``total_debt.``
 
-The binary target variable 'loan_status' comprised of two outcomes 0 - 'healthy loan' and 1 - 'risky loan.'
+The binary target variable ``loan_status`` comprised of two outcomes 0 - 'healthy loan' and 1 - 'risky loan.'
 
 All predictor variables were saved to a 2D array variable 'X', and the target variable was saved to a data series 'y'.
 
