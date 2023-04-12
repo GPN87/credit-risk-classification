@@ -1,7 +1,7 @@
-# Module 12 Report Template
+# Credit risk classification among peer-to-peer loans
 
 ## Overview of the Analysis
-The purpose of this analysis is to evaluate the efficacy of machine learning logistic regression modelling to detect risky loans from a sample of approximately 77,000 loans from a peer-to-peer lending service. Further, the analysis explores whether recalibrating the model using oversampling techniques improved the accuracy of the model.
+The purpose of this analysis is to evaluate the efficacy of logistic regression modelling to detect risky loans from a sample of approximately 77,000 loans from a peer-to-peer lending service. Further, the analysis explores whether recalibrating the model using oversampling techniques improved the accuracy of the model.
 
 The objective was to find out whether instances of 'healthy' and 'risky' loans could be correctly identified using machine learning.
 
@@ -29,10 +29,10 @@ The results for both instances of the model are as follows.
   * The model predicted 18,679 of the 18,759 'healthy' loans, a recall rate of 99.57%
 
   * Predictive performance for 'risky' loan detection was somewhat lower, with combined precision and recall (f1) score of 88.36%
-  * Of all 638 risky predictions, 558 were correct, and 80 were False Positive, representing a precision rate of 89.28% 
-  * Of the 625 risky loans, 558 were detected, representing a recall of 89.25%
+  * Of all 638 'risky' predictions, 558 were correct, and 80 were False Positive, representing a precision rate of 89.28% 
+  * Of the 625 'risky' loans, 558 were detected, representing a recall of 89.25%
 
-* The discrepancy between the macro avg f1 score (93.98%) and the weighted-avg f1 score (99.25) suggests that the distribution of labels is lopsided. For this reason, a second model was built with oversampled data.
+* The discrepancy between the macro avg f1 score (93.98%) and the weighted-avg f1 score (99.25%) suggests that the distribution of labels is lopsided. For this reason, a second model was built with oversampled data.
 
 
 
@@ -49,11 +49,11 @@ The results for both instances of the model are as follows.
 ## Summary
 * Both models appear to have  a high level of accuracy, with the second model slightly out performing the first overall.
 
-* The second model, which uses random oversampling to balance the classes, had a higher f1 score of 93.05 when predicting risky loans. Though the number of false positives increased slightly, representing a slight decrease in precision from 89.29% to 87.25%
+* The second model, which uses random oversampling to balance the classes, had a higher f1 score of 93.05% when predicting 'risky' loans. Though the number of false positives increased slightly, representing a slight decrease in precision from 89.29% to 87.25%
 
 * The higher False Positive rate when attempting to predict '1's highlights the difficulty in detecting 'risky' loans in such a lopsided dataset.
 
-* Much of the improvement in Model 2's ability to detect'1's was in its recall. I.e. of all 625 'risky' loans, Model 2 predicted 623.
+* Much of the improvement in Model 2's ability to detect '1's was in its recall. I.e. of all 625 'risky' loans, Model 2 predicted 623.
 
 * Given the risks associated with a False Positive in this scenario are relatively small (i.e. incorrectly labelling a loan as 'risky' is not as detrimental as say, a diabetes diagnosis), it is recommended that the improvements to Model 2's recall make it the superior model.
 
